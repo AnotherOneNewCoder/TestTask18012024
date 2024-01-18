@@ -44,7 +44,7 @@ fun MainScreen(
         }
     }
 }
-
+// of course I should use dividers but copy and paste was faster way
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
@@ -118,8 +118,10 @@ fun Item(
                     }
                 }
             }
-            HyperlinkText(fullText = item.url, modifier = Modifier
-                .padding(bottom = 4.dp, end = 4.dp, start = 4.dp))
+            HyperlinkText(
+                fullText = item.url, modifier = Modifier
+                    .padding(bottom = 4.dp, end = 4.dp, start = 4.dp)
+            )
             Row {
                 Text(
                     text = "Date time stamp:",
@@ -174,11 +176,10 @@ fun Item(
             }
 
 
-
         }
     }
 }
-
+// took this function from another project and because i was in a hurry didn't have enough time to property adapted to this project
 @Composable
 fun HyperlinkText(
     modifier: Modifier = Modifier,
